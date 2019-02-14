@@ -63,6 +63,10 @@
             list-style: none;
         }
 
+        .disappear{
+            display: none;
+        }
+
         @media (max-width: 700px){
             #menu{
                 display: none;
@@ -84,7 +88,7 @@
             <li class="menuItem">Blog</li>
             <li class="menuItem">Contact</li> 
         </ul>
-        <ul id="menu2">
+        <ul id="menu2" class="disappear">
                 <li class="menuItem2">About</li>
                 <li class="menuItem2">Blog</li>
                 <li class="menuItem2">Contact</li> 
@@ -104,7 +108,8 @@
                 console.log('loaded')
 
                 $('.dropdownButton').on('click', function(){
-                    console.log('clicked')
+                    //console.log('clicked')
+                    $('#menu2').toggleClass('disappear');
                 })
             });
         </script>
