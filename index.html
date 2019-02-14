@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <style>
+        *{
+            box-sizing: border-box;
+        }
         #wrap{
             /*background-image: url('./img/dudeNew1.JPG');*/
             
@@ -15,9 +19,70 @@
         #image{
             max-width: 100%;
         }
+
+        #navigation{
+            /* height: 50px; */
+            position: relative;
+        }
+
+        #logo{
+            display: inline-block;
+        }
+
+        #menu{
+            float: right;
+            padding-right: 25px;
+            padding-top: 13px;
+        }
+
+        #menu2{
+            position: absolute;
+            color: white;
+            right: 3rem;
+        }
+
+        #dropDownIcon{
+            font-size: 1.6em;
+            padding-top: 25px;
+            float: right;
+            padding-right: 25px;
+            display: none;
+        }
+
+        .menuItem{
+            display: inline-block;
+            padding-right: 17px;
+        }
+
+        @media (max-width: 700px){
+            #menu{
+                display: none;
+            }
+
+        #dropDownIcon{
+            display: inline-block;
+        }
+        }
     </style>
 </head>
 <body>
+    <nav id="navigation">
+        <h2 id="logo">Logo</h2>
+        <ul id="menu">
+            <li class="menuItem">About</li>
+            <li class="menuItem">Blog</li>
+            <li class="menuItem">Contact</li> 
+        </ul>
+        <ul id="menu2">
+                <li class="menuItem2">About</li>
+                <li class="menuItem2">Blog</li>
+                <li class="menuItem2">Contact</li> 
+            </ul>
+        <span>
+                <i id="dropDownIcon" class="fab fa-accessible-icon"></i>
+        </span>
+        
+    </nav>
     <div id="wrap">
         <img id="image" src="./img/dudeNew1.JPG" alt="">
     </div>
