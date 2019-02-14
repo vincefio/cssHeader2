@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <style>
         *{
@@ -52,6 +56,11 @@
         .menuItem{
             display: inline-block;
             padding-right: 17px;
+            
+        }
+
+        .menuItem2{
+            list-style: none;
         }
 
         @media (max-width: 700px){
@@ -64,15 +73,8 @@
         }
         }
     </style>
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-    <script>
-        $('document').ready(function(){
-            alert('loaded')
-        });
-    </script>
+
+
 </head>
 <body>
     <nav id="navigation">
@@ -88,12 +90,23 @@
                 <li class="menuItem2">Contact</li> 
             </ul>
         <span>
-                <i id="dropDownIcon" class="fab fa-accessible-icon"></i>
+            <a class="dropdownButton" href="#"><i id="dropDownIcon" class="fab fa-accessible-icon"></i></a>
+            
         </span>
         
     </nav>
     <div id="wrap">
         <img id="image" src="./img/dudeNew1.JPG" alt="">
     </div>
+
+    <script>
+            $('document').ready(function(){
+                console.log('loaded')
+
+                $('.dropdownButton').on('click', function(){
+                    console.log('clicked')
+                })
+            });
+        </script>
 </body>
 </html>
