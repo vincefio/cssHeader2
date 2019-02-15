@@ -73,7 +73,7 @@
 
 
         .disappear{
-            display: none;
+            display: none !important;
             
         }
 
@@ -84,6 +84,12 @@
 
              #dropDownIcon{
                 display: inline-block;
+            }
+        }
+
+        @media(min-width: 700px){
+            .menu2{
+                /* display: none; */
             }
         }
 
@@ -135,6 +141,16 @@
                     //console.log('clicked')
                     $('#menu2').toggleClass('disappear');
                 })
+
+                window.onresize = function(event) {
+                    if($(window).width()> 699){
+                    console.log($(window).width())
+                    console.log('greater!')
+                    $('#menu2').addClass('disappear');
+                }
+                };
+
+                
             });
         </script>
 </body>
