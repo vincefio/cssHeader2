@@ -41,8 +41,12 @@
 
         #menu2{
             position: absolute;
-            color: white;
-            right: 3rem;
+            background-color: red;
+            right: 0;
+            animation: slideIn 1s;
+            height: 100vh;
+            width: 40%;
+            margin-top: 0;
         }
 
         #dropDownIcon{
@@ -61,10 +65,16 @@
 
         .menuItem2{
             list-style: none;
+            margin-top: 15px;
+            font-weight: 600;
+            font-size: 1.2em;
+           
         }
+
 
         .disappear{
             display: none;
+            
         }
 
         @media (max-width: 700px){
@@ -72,9 +82,20 @@
                 display: none;
             }
 
-        #dropDownIcon{
-            display: inline-block;
+             #dropDownIcon{
+                display: inline-block;
+            }
         }
+
+        /*CODE FOR CSS MENU ANIMATION*/
+        @keyframes slideIn{
+            from {
+                opacity: 0;
+                right: -25em;
+            } to{
+                opacity: 1;
+                right: 0;
+            }
         }
     </style>
 
@@ -88,11 +109,14 @@
             <li class="menuItem">Blog</li>
             <li class="menuItem">Contact</li> 
         </ul>
-        <ul id="menu2" class="disappear">
-                <li class="menuItem2">About</li>
-                <li class="menuItem2">Blog</li>
-                <li class="menuItem2">Contact</li> 
-            </ul>
+        
+                <ul id="menu2" class="disappear">
+                        <li class="menuItem2">About</li>
+                        <li class="menuItem2">Blog</li>
+                        <li class="menuItem2">Contact</li> 
+                    </ul>
+
+
         <span>
             <a class="dropdownButton" href="#"><i id="dropDownIcon" class="fab fa-accessible-icon"></i></a>
             
